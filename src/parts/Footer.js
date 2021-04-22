@@ -18,17 +18,17 @@ export default function Footer() {
                         <h6 className="mt-2">For Beginner</h6>
                         <ul className="list-group list-group-flush">
                             <li className="list-group-item">
-                                <Button type="Link" href="/register">
+                                <Button type="link" href="/register">
                                     New Account
                                 </Button>
                             </li>
                               <li className="list-group-item">
-                                <Button type="Link" href="/properties">
+                                <Button type="link" href="/properties">
                                     Start Booking a Room
                                 </Button>
                             </li>
                               <li className="list-group-item">
-                                <Button type="Link" href="/use-payments">
+                                <Button type="link" href="/use-payments">
                                     Use Payment
                                 </Button>
                             </li>
@@ -38,17 +38,17 @@ export default function Footer() {
                         <h6 className="mt-2">Explore Us</h6>
                         <ul className="list-group list-group-flush">
                             <li className="list-group-item">
-                                <Button type="Link" href="/career">
+                                <Button type="link" href="/career">
                                     Our Career
                                 </Button>
                             </li>
                               <li className="list-group-item">
-                                <Button type="Link" href="/privacy">
+                                <Button type="link" href="/privacy">
                                     Privacy
                                 </Button>
                             </li>
                               <li className="list-group-item">
-                                <Button type="Link" href="/trems">
+                                <Button type="link" href="/trems">
                                     Trems & Condition
                                 </Button>
                             </li>
@@ -58,12 +58,12 @@ export default function Footer() {
                         <h6 className="mt-2">Connect Us</h6>
                         <ul className="list-group list-group-flush">
                             <li className="list-group-item">
-                                <Button isExternal type="Link" href="mailto:support@staycation.id">
+                                <Button isExternal type="link" href="mailto:support@staycation.id">
                                     support@staycation.id
                                 </Button>
                             </li>
                               <li className="list-group-item">
-                                <Button isExternal type="Link" href="tel:+6202122081996">
+                                <Button isExternal type="link" href="tel:+6202122081996">
                                     021 - 2208 - 1996
                                 </Button>
                             </li>
