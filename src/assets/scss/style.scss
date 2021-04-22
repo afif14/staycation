@@ -213,6 +213,13 @@ section {
   height: 500px;
 }
 
+main {
+  p{
+    color: $gray-500;
+    font-weight: 300;
+  }
+}
+
 //footer
 footer {
   border-top: 1px solid $gray-200;

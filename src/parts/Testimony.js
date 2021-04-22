@@ -29,7 +29,7 @@ export default function Testimony({data}) {
                     </span>
 
                     <div>
-                        <Button className="btn px-5" style={{marginTop: 40}} hasShadow isPrimary type="Link"
+                        <Button className="btn px-5" style={{marginTop: 40}} hasShadow isPrimary type="link"
                         href={`/testimonial/${data._id}`}>
                             Read Their Story
                         </Button>
