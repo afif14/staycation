@@ -27,7 +27,7 @@ class BookingForm extends Component {
       data: {
         ...this.state.data,
         [e.target.name]: e.target.value,
-      },
+      }
     });
   };
 
@@ -79,7 +79,7 @@ class BookingForm extends Component {
 
   render() {
     const { data } = this.state;
-    const { itemDetails } = this.props;
+    const { itemDetails, startBooking } = this.props;
 
     return (
       <div className="card bordered" style={{ padding: "60px 80px" }}>

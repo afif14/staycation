@@ -1,5 +1,3 @@
-import Date from "elements/form/InputDate"
-
 // eslint-disable-next-line import/no-anonymous-default-export
 export default date => {
     const d = new Date(date);

@@ -8,6 +8,9 @@ import BookingForm from 'parts/BookingForm'
 
 
 import ItemDetails from "json/itemDetails.json"
+import Footer from 'parts/Footer'
+import Categories from 'parts/Categories'
+import Testimony from 'parts/Testimony'
 
 export default class DetailsPage extends Component {
 
@@ -41,6 +44,9 @@ export default class DetailsPage extends Component {
                         </div>
                     </div>
                 </section>
+                <Categories data={ItemDetails.categories}/>
+                <Testimony data={ItemDetails.testimonial}/>
+                <Footer/>
             </>
         )
     }
