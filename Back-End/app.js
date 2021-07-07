@@ -3,8 +3,10 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const methodOverride = require('method-override');
 const session = require('express-session');
 const flash = require('connect-flash');
+const cors = require('cors');
 //import mongoose
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/db_staycation', {
@@ -19,12 +21,14 @@ var usersRouter = require('./routes/users');
 // router admin
 const adminRouter = require('./routes/admin');
 
+
 var app = express();
 
+app.use(cors());
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
+app.use(methodOverride('_method'));
 app.use(session({
   secret: 'keyboard cat',
   resave: false,
@@ -43,6 +47,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 // admin
 app.use('/admin', adminRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

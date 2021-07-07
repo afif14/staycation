@@ -17,8 +17,46 @@
           <!-- Page Heading -->
           <h1 class="h3 mb-2 text-gray-800">Tables Category</h1>
           <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. A laudantium cumque voluptatibus totam repellat omnis nesciunt dignissimos, voluptatum tenetur tempore.</p>
+           <% if(action == 'view') { %>
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#show-item" role="tab" aria-controls="home"
+                aria-selected="true">Show Item</a>
+            </li>
 
-         <%- include('../item/table_item.ejs') %> 
+            <li class="nav-item">
+              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#add-item" role="tab" aria-controls="profile"
+                aria-selected="false">Add Item</a>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <%- include('show_table_item.ejs') %>
+            <%- include('add_item.ejs') %>
+          </div>
+
+          <% } else if(action == 'show image') { %>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#show-image" role="tab"
+              aria-controls="home" aria-selected="true">Show Image</a>
+          </li>
+
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <%- include('show_image_item.ejs') %>
+        </div>
+         <% }else{%>
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#edit-item" role="tab" aria-controls="home"
+              aria-selected="true">Edit Item</a>
+          </li>
+
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <%- include('edit_item.ejs') %>
+        </div>
+        <% } %>
         </div>
         <!-- /.container-fluid -->
 
@@ -57,4 +95,7 @@
     </div>
   </div>
 
-  <%- include('../../partials/js.ejs') %> 
+  <%- include('../../partials/js.ejs') %>
+<script>
+  CKEDITOR.replace('about');
+</script>
